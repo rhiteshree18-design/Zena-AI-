@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    transition: all 0.7s ease;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- Navbar --- */
+.navbar {
+    background-color: rgba(10, 25, 47, 0.95);
+    height: 60px;
+    color: #00d4ff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+.navbar div {
+    display: flex;
+    align-items: center;
+}
+
+.border {
+    border: 1.5px solid transparent;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.border:hover {
+    border: 1.5px solid white;
+    text-shadow: 0 0 15px #00d4ff;
+}
+
+.nav-logo .logo {
+    background-image: url("zena logo.png");
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+/* --- Center Form --- */
+.form {
+    width: 400px;
+    background-image: url(bg.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(10, 25, 47, 0.95);
+    padding: 40px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(1.5px);
+    margin: 80px auto;
+    /* centers form horizontally */
+}
+
+h1,
+.login-heading {
+    text-align: center;
+    color: #03343d;
+}
+
+/* --- Inputs & Labels --- */
+label {
+    color: #00d4ff;
+    font-size: 18px;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* --- Buttons --- */
+button {
+    background-color: transparent;
+    color: #00d4ff;
+    border: 2px solid white;
+    padding: 10px 25px;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #00d4ff;
+    color: white;
+}
+
+/* --- Footer or Additional Text --- */
+.form-last {
+    color: white;
+    margin-top: 15px;
+}
+
+a {
+    color: #00d4ff;
+    text-decoration: none;
+}
+
+/* --- Popup Animations --- */
+.popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: slideIn 0.5s ease forwards;
+}
+
+.popup.error {
+    background-color: #f44336;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

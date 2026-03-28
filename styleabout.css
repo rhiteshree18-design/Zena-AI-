@@ -1,0 +1,144 @@
+/* ====== GENERAL STYLING ====== */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #0a192f;
+    background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+    overflow-x: hidden;
+    transition: background 0.8s ease;
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
+    background-color: rgba(10, 25, 47, 0.97);
+    height: 70px;
+    color: #00d4ff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-logo .logo {
+    background-image: url("zena logo.png");
+    background-size: cover;
+    background-position: center;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.6);
+    transition: transform 0.4s ease;
+}
+
+.nav-logo .logo:hover {
+    transform: rotate(15deg) scale(1.1);
+}
+
+.zena-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #00d4ff;
+}
+
+.home-text {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1.5px solid transparent;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.home-text:hover {
+    border: 1.5px solid #00d4ff;
+    background-color: rgba(0, 212, 255, 0.1);
+    text-shadow: 0 0 15px #00d4ff;
+}
+
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.img {
+    background-image: url("zena\ logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    box-shadow: 0 0 25px rgba(0, 212, 255, 0.4);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+}
+
+p:hover {
+    transform: scale(1.02);
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    section {
+        padding: 70px 20px;
+    }
+
+    .img {
+        width: 180px;
+        height: 180px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}

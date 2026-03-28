@@ -1,0 +1,182 @@
+/* ===== Base Styling ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.7s ease;
+    background: linear-gradient(135deg, #f5faff, #d6f7ff);
+    overflow-x: hidden;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    background-color: rgba(10, 25, 47, 0.95);
+    height: 60px;
+    color: #00d4ff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+    padding: 0 20px;
+}
+
+.border {
+    border: 1.5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.border:hover {
+    border: 1.5px solid white;
+    text-shadow: 0 0 15px #00d4ff;
+}
+
+.nav-logo {
+    height: 50px;
+    width: 50px;
+}
+
+.logo {
+    background-image: url("zena logo.png");
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.zena-name {
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+.home-text {
+    margin-left: auto;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+/* ===== Headings ===== */
+h1 {
+    text-align: center;
+    color: #03343d;
+    font-size: 2.5rem;
+    margin-top: 50px;
+}
+
+.login-heading {
+    font-size: 1.3rem;
+    text-align: center;
+    color: #006d77;
+    margin-bottom: 40px;
+}
+
+/* ===== Form Section ===== */
+.form {
+    width: 420px;
+    min-height: 420px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(10, 25, 47, 0.45);
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px;
+    transition: transform 1s ease, opacity 1s ease;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.form.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== Form Fields ===== */
+label {
+    color: #03343d;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+input {
+    width: 90%;
+    padding: 12px 15px;
+    border: 2px solid #00b4d8;
+    border-radius: 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    color: #03343d;
+    margin-top: 5px;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+input:focus {
+    background: #ffffff;
+    box-shadow: 0 0 10px #00d4ff;
+    transform: scale(1.02);
+}
+
+/* ===== Button ===== */
+button {
+    margin-top: 25px;
+    width: 90%;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(90deg, #00d4ff, #0077b6);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px #00d4ff;
+    background: linear-gradient(90deg, #0096c7, #023e8a);
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    color: #03343d;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
+
+/* ===== Smooth Scroll ===== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .form {
+        width: 85%;
+        margin-top: 30px;
+    }
+
+    .home-text {
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .login-heading {
+        font-size: 1rem;
+    }
+}
